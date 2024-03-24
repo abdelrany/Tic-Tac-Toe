@@ -1,5 +1,13 @@
-function Log() {
-  return <ol id="log"></ol>;
+function Log({ turns }) {
+	return (
+		<ol id='log'>
+			{turns?.map((turn, index) => (
+				<li key={index}>
+					{turn.player} slected :{turn.square.row},{turn.square.col}
+				</li>
+			))}
+		</ol>
+	)
 }
 
-export default Log;
+export default Log
